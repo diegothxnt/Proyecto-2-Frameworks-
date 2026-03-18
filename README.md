@@ -50,19 +50,35 @@ Proyecto Angular que implementa **12 formas diferentes** de visualizar el tiempo
 ### Pasos de instalación
 
 ```bash
-# 1. Clonar el repositorio
-git clone https://github.com/TU-USUARIO/tiempo-visualizaciones.git
+# PASO 1: Clonar y descargar mi repositorio 
+git clone https://github.com/diegothxnt/Proyecto-2-Frameworks-.git
 
-# 2. Entrar a la carpeta
+# PASO 2: Crear una nueva carpeta en el escritorio (con el nombre que quieras)
+cd ~/Desktop
+mkdir mi-proyecto-final
+cd mi-proyecto-final
+
+# PASO 3: En VS Code, abrir la terminal bash y ejecutar este comando
+npx @angular/cli@15 new tiempo-visualizaciones --skip-tests --style=css --routing
+# Cuando pregunte: "Do you want to enable Server-Side Rendering (SSR)?" → Responde: N (no)
+
+# PASO 4: Entrar al proyecto que se acaba de crear
 cd tiempo-visualizaciones
 
-# 3. Instalar dependencias
+# PASO 5: BORRAR la carpeta app que creó Angular automáticamente
+rm -rf src/app/
+
+# PASO 6: COPIAR mi carpeta app desde el repositorio clonado
+# Reemplaza RUTA_DEL_REPO con la ubicación donde descargaste mi repositorio en el PASO 1
+cp -r ~/Desktop/tiempo-visualizaciones/src/app ./src/
+
+# PASO 7: Instalar dependencias
 npm install
 
-# 4. Ejecutar el servidor
+# PASO 8: Ejecutar el proyecto
 ng serve
 
-# 5. Abrir navegador
+# PASO 9: Abrir el navegador
 http://localhost:4200
 ```
 Elaborado por: Diego Rojas.
